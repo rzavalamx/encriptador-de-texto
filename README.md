@@ -17,6 +17,7 @@ encriptacion utilizada, las "llaves" de encriptación utlizadas son las siguient
 ## Visuales
 
 Capturas de pantalla, videos o GIFs que demuestran lo que hace el proyecto y cómo usarlo.
+![encriptador](https://github.com/rzavalamx/encriptador-de-texto/assets/173956835/2f064825-75ee-4d36-b627-e37b975357eb)
 
 ### Funcionalidades 📋
 
