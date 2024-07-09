@@ -49,8 +49,8 @@ que tenga la misma funcionalidad del Ctrl-C o de la opción "copiar" del menu de
 
 ## Para usar el Encriptador visite la liga:
 
-Si quiere ver el proyecto visite la [aquí](https://github.com/your/project/issues).
+Si quiere ver el proyecto visite la [aquí](https://github.com/rzavalamx/encriptador-de-texto/tree/main).
 
 ## Autor ✒️
 
-- **Rafael Zavala Cruz** - _Trabajo inicial_ - [Rafael Zavala C](https://github.com/brayandiazc)
+- **Rafael Zavala Cruz** - _Trabajo inicial_ - [Rafael Zavala C](https://github.com/rzavalamx)
