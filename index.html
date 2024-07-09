@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img class="logo" src="./assets/logo.png" alt="Logo Alura">
+    </header>
+    <!-- Seccion Principal -->
+    <main>
+
+        <!-- Seccion Izquierda donde se ingresa el Texto a Encriptar -->
+        <section class="encriptador" >
+            <!-- Area Izquierda donde se ingresa el Texto a Encriptar -->
+            <textarea class="encriptar" placeholder="Ingrese el texto aqui"></textarea>
+            <!-- div para el Aviso:  Solo letras minusculas y sin acentos -->            
+            <div class="encriptator-aviso">
+                <img class="img-aviso" src="./assets/aviso.png" alt="imagen aviso">
+                <p class="texto-aviso">Solo letras minusculas y sin acentos</p> 
+            </div>
+            <!-- div para los botones encriptar y desencriptar -->
+            <div class="encriptador-contenedor">
+                <button onclick="encriptar();" class="btn-encriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <!-- Seccion Panel Derecha donde se motrara el Texto Encriptado o Desencriptado -->
+        <section class="panel-resultado">
+            <div class="panel-resultado-contenedor">
+                <img class="img-mono" src="./assets/mono.png" alt="Imagen mono"> 
+                <p class="texto-uno">Ningun mensaje encontrado</p>
+                <p class="texto-dos">Ingrese el texto que desea encriptar o desencriptar</p>
+            </div>
+            <textarea class="evaluar" type="mensaje" readonly></textarea>
+            <button onclick="copiar();" class="btn-copiar">Copiar</button>
+        </section>
+
+    </main>
+    
+    <!-- Pie de Pagina o Footer -->
+     <footer >
+        <p class="copyright">CopyRight 2024 - Encriptador de Texto - desarrollado por Rafael Zavala Cruz</p>
+        <img class="linked" src="./assets/linkedin.png" alt="Logo LinkedIn">
+        <img class="git" src="./assets/github.png" alt="Logo GitHub">
+     </footer>
+
+     <script src="./js/encriptador.js"></script>
+    
+</body>
+</html>

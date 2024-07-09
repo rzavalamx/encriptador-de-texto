@@ -1,0 +1,420 @@
+/* Importando Fuente de la Biblioteca de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Variables Globales CSS */
+:root{
+    --Font:#e5e5e5ee;
+    --White:#FFFFFF;
+    --Dark-Blue:#060af5;
+    --Greey:#686D76;
+    --Medium-Gray:#67808E;
+    --Gray:#343A40;
+    --Greek:#495057;
+    --RGBA:rgba(0,0,0,0.08);
+    --White-Blue:#D8DFE8;
+    --Medium-Blue:#0a38718a;
+}
+
+/* Resetear CSS */       
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background: var(--White);
+}
+
+::selection{
+    background: var(--Dark-Blue);
+    color: var(--White);
+}
+
+body{
+    /* Util definirlo al 100 para cuando se configure elresponsive */
+    height: 100%;
+}
+
+img{
+    /* Util definirlo al 100 para cuando se configure elresponsive */
+    max-width: 100%;
+}
+
+/* Encabezado */
+header{
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+/* Principal */
+main{
+    display: flex;
+    flex-direction: row;
+    background: url(../assets/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.encriptador{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+.encriptar{
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--Greey);
+    border-radius: 15px;
+    resize: none;
+}
+
+/* Cambiar el color del texto de la leyenda, "Ingrese el texto aqui" */
+.encriptar::placeholder,:focus{
+    color: var(--Dark-Blue);
+}
+
+.encriptador-aviso{
+    display: flex;
+    flex-direction: row;  /* Ubicamos los elementos en fila */
+    align-items: center;  /* Alineamos los elementos al centro */
+    padding: 0;
+    gap: 8px;             /* Espaciar cada uno de los elementos */
+    position: absolute;
+    top: 500px;           /* Ubicar los elementos hacia arriba. */
+}
+
+.texto-aviso{
+    width: 100%;          /* Para fijar el ancho */ 
+    font-style: normal;   /* Mantenemos el tipo de fuente */
+    font-weight: 400;     /* Grosor de la fuente */
+    font-size: 18px;
+    line-height: 150%;    /* Acomodar en linea el texto */
+    opacity: 0.8;
+    color: var(--Medium-Gray);
+}
+
+.encriptador-contenedor{
+    display: flex;            
+    flex-direction: row;
+    align-items: flex-start; /* Flexible al Inicio, es decir no sera centrado */
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+}
+
+.btn-encriptar{
+    width: 328px;            /* Declaramos el Ancho */
+    height: 67px;            /* Declaramos la Altura */      
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;      /* Alinear texto */
+    color: var(--White);
+    background: var(--Dark-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;     /* Redondear esquinas */
+    cursor: pointer;         /* Indicar cambio cuando el puntero este sobre el boton */ 
+    box-shadow: 0px 20px 29px -5px var(--RGBA); 
+}
+
+/* Dar la Impresion de Activar y Desactivar el Boton, para eso Activamos la pseudoClase active */ 
+.btn-encriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Font),  /* Iniciar */
+    inset -3px -4px 8px var(--Dark-Blue);       /* Finalizar */
+    color: var(--White-Blue);
+}
+
+.btn-desencriptar{
+    width: 328px;            /* Declaramos el Ancho */
+    height: 67px;            /* Declaramos la Altura */ 
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;      /* Alinear texto */
+    color: var(--Dark-Blue);
+    background: var(--White-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;     /* Redondear esquinas */
+    cursor: pointer;         /* Indicar cambio cuando el puntero este sobre el boton */
+    box-shadow: 0px 20px 29px -5px var(--RGBA); 
+}
+
+/* Dar la Impresion de Activar y Desactivar el Boton, para eso Activamos la pseudoClase active */ 
+.btn-copiar:active,
+.btn-desencriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Dark-Blue),  /* Iniciar */
+    inset -3px -4px 8px var(--Font);                 /* Finalizar */
+    color: var(--Medium-Blue);
+}
+
+/* Continuamos con la Clase tarjeta */
+.panel-resultado{
+    width: 270px;
+    height: 580px;
+    background: var(--Font);
+    box-shadow: 10px 24px 32px -8px var(--Gray);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.panel-resultado-contenedor{
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--Font);
+}
+
+.img-mono{
+    background: var(--Font);
+}
+
+.texto-uno{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Gray);
+    background: var(--Font);
+}
+
+.texto-dos{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Medium-Gray);
+    background: var(--Font);
+}
+
+.evaluar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Greek);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus{
+    outline: none;
+}
+
+.btn-copiar{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--White-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Llamar a nuestras 3 clase btn con la pseudoclase:hover */
+/* Simular una reduccion del tamaño del boton, al pasar o posicionarsno sobre el boton */
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover{
+    transform: scale(0.97);
+}
+
+/* PIE DE PAGINA */
+footer{
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 2px solid var(--Font);
+    color: var(--Gray);
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Gray);
+}
+
+/* Simular un cambio en la opacidad al pasar el Mouse sobre la imagen del boton */
+.linked:hover{
+    color: var(--Font);
+    opacity: 0.8;
+}
+
+.git:hover{
+    color: var(--Font);
+    opacity: 0.6;
+}
+
+/* EMPEZAMOS A CONFIGURAR NUESTRO CSS PARA EL MODO RESPONSIVO */
+/* media */
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;  /* Acomodar todos los elementos en columna */
+        align-items: center;     /* Acomodar todos los elementos hacia el centro */ 
+        width: 100%;             /* Ancho, para mantener cada uno de los elementos al 100% */
+    }
+
+    .encriptador{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador-contenedor{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encriptador-aviso{
+        position: inherit;
+        margin: 15px;
+    }   
+    
+    .panel-resultado{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .panel-resultado-contenedor{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+
+    /* Ocultar el mono al habilitar efecto responsivo */
+    .img-mono{
+        display: none;
+    }
+
+    .btn-copiar{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+
+/* EMPEZAMOS A TRABAJAR CON LA MEDIA DE ALTO Y ANCHO 720px, TABLETS */
+@media(max-width: 720px){
+    
+    header .logo{
+        width: 100%;
+        background: var(--White);
+        padding: 2px;
+    }
+
+    .encriptar{
+        width:  90%;
+        font-size: 24px;
+    }
+
+    .encriptador-contenedor{
+        display: grid;  /* Reacomodar los elementos en una caja tipo rejilla */
+        gap: 21px;      /* Espaciar Elementos */    
+    }
+
+    .panel-resultado{
+        width: 90%;
+    }
+
+    .copyright{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
